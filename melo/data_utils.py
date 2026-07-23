@@ -120,7 +120,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
             spec_filename = spec_filename.replace(".spec.pt", ".mel.pt")
         try:
             spec = torch.load(spec_filename)
-            assert False
+            # assert False
         except:
             if self.use_mel_spec_posterior:
                 spec = mel_spectrogram_torch(

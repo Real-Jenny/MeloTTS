@@ -166,7 +166,8 @@ def run():
     net_g = DDP(net_g, device_ids=[rank], find_unused_parameters=True)
     net_d = DDP(net_d, device_ids=[rank], find_unused_parameters=True)
     
-    pretrain_G, pretrain_D, pretrain_dur = load_pretrain_model()
+    # pretrain_G, pretrain_D, pretrain_dur = load_pretrain_model()
+    pretrain_G, pretrain_D, pretrain_dur = None, None, None
     hps.pretrain_G = hps.pretrain_G or pretrain_G
     hps.pretrain_D = hps.pretrain_D or pretrain_D
     hps.pretrain_dur = hps.pretrain_dur or pretrain_dur
